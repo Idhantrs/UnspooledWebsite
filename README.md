@@ -1,6 +1,6 @@
 # Unspooled Website
 
-A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led nonprofit.
+A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led initiative.
 
 ## Files
 
@@ -14,17 +14,30 @@ A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led
 | `get-involved.html` | How each stakeholder group can help + support resources |
 | `contact.html` | Contact info + message form |
 | `css/style.css` | All styling (colors at the top) |
-| `js/main.js` | Mobile menu + contact form |
+| `js/main.js` | "Project Unspooled" intro, scroll animations, mobile menu, contact form |
 | `images/` | Put member photos here |
+
+## The intro screen
+
+The first page a visitor opens shows a ~4-second "Project Unspooled" intro, then the screen
+lifts away like a curtain. It plays **once per browser session** (not on every page click).
+Visitors can click, tap, scroll, or press any key to skip it, and people who have
+"reduce motion" turned on get a simple fade instead.
+
+- **Change the wording or timing:** edit `INTRO_KICKER`, `INTRO_TITLE`, `INTRO_DESC`,
+  or `INTRO_HOLD_MS` at the top of `js/main.js`.
+- **See it again while testing:** open a new tab/window, or run
+  `sessionStorage.removeItem("unspooled-intro-seen")` in the browser console and refresh.
 
 ## Before you publish: things to fill in
 
-1. **Team email.** Find and replace `your-team-email@example.com` in every `.html` file
-   (in VS Code: Ctrl+Shift+H, which replaces across all files).
-2. **Member bios.** Open `team.html` and look for "Member Name", "Role", and the bio text.
+1. **Member bios.** Open `team.html` and look for "Member Name", "Role", and the bio text.
    Instructions for adding photos are in a comment right above the cards.
-3. **Events.** Open `events.html` and replace the placeholder event cards.
-4. **Social handle** (optional) in `contact.html`.
+2. **Events.** Open `events.html` and replace the placeholder event cards.
+3. **Social handle** (optional) in `contact.html`.
+
+The team email (`teamunspooled@gmail.com`) is already filled in everywhere. To change it,
+find and replace it across all `.html` files (in VS Code: Ctrl+Shift+H).
 
 To preview, double-click `index.html` to open it in your browser.
 
@@ -51,7 +64,6 @@ A custom domain looks more professional when you email companies. It costs about
    (Cloudflare sells at cost; you'll need a parent's card).
 2. Open your Pages project → **Custom domains** → **Set up a custom domain** → enter it. Cloudflare sets up DNS and HTTPS for you.
 
-### Optional: a team email
-Make a free Gmail account for the team (e.g. `unspooledteam@gmail.com`) and use it for the
-replace in step 1 above. If you buy a domain, **Cloudflare Email Routing** (free) can forward
-`hello@yourdomain.org` to that Gmail.
+### Optional: a custom-domain email
+If you buy a domain, **Cloudflare Email Routing** (free) can forward
+`hello@yourdomain.org` to `teamunspooled@gmail.com`.
