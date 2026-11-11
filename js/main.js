@@ -165,6 +165,53 @@ if (!reduceMotion && "IntersectionObserver" in window) {
 }
 
 // ---------------------------------------------------------------
+// Expandable event cards: smooth open/close for <details class="event">
+// (Works without this too: the browser's built-in toggle is the fallback.)
+// ---------------------------------------------------------------
+document.querySelectorAll("details.event").forEach((card) => {
+  const summary = card.querySelector("summary");
+  const body = card.querySelector(".event-body");
+  if (!summary || !body || reduceMotion || !card.animate) return;
+  let anim = null;
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+    const start = card.getBoundingClientRect().height;
+    if (anim) anim.cancel();
+
+    if (!card.open) {
+      card.open = true;
+      const end = card.getBoundingClientRect().height;
+      run(start, end);
+      body.animate(
+        [{ opacity: 0, transform: "translateY(-8px)" }, { opacity: 1, transform: "none" }],
+        { duration: 380, delay: 60, easing: "ease-out", fill: "backwards" }
+      );
+    } else {
+      const borders = card.offsetHeight - card.clientHeight;
+      const end = summary.getBoundingClientRect().height + borders;
+      card.classList.add("is-closing");
+      run(start, end, () => { card.open = false; });
+    }
+  });
+
+  function run(from, to, done) {
+    card.style.overflow = "hidden";
+    anim = card.animate([{ height: from + "px" }, { height: to + "px" }], {
+      duration: 420,
+      easing: "cubic-bezier(0.2, 0.7, 0.2, 1)",
+    });
+    anim.onfinish = () => {
+      if (done) done();
+      card.style.overflow = "";
+      card.classList.remove("is-closing");
+      anim = null;
+    };
+    anim.oncancel = () => { card.classList.remove("is-closing"); };
+  }
+});
+
+// ---------------------------------------------------------------
 // Footer year
 // ---------------------------------------------------------------
 document.querySelectorAll("[data-year]").forEach((el) => {

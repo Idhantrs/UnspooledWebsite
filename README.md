@@ -49,7 +49,9 @@ Visitors can click, tap, scroll, or press any key to skip it, and people who hav
 
 1. **Member bios.** Open `team.html` and look for "Member Name", "Role", and the bio text.
    Instructions for adding photos are in a comment right above the cards.
-2. **Events.** Open `events.html` and replace the placeholder event cards.
+2. **Events.** Open `events.html`. Each event is a click-to-expand card: the `<summary>` part
+   is always visible (keep it short), and the `<div class="event-body">` part only shows when
+   someone clicks. Instructions are in a comment above the cards.
 3. **Social handle** (optional) in `contact.html`.
 
 The team email (`teamunspooled@gmail.com`) is already filled in everywhere. To change it,

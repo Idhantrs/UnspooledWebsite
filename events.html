@@ -54,22 +54,43 @@
   <section class="section">
     <div class="container">
       <h2>Upcoming Events</h2>
+      <p class="form-note" style="margin-top:6px">Click an event to see the full details.</p>
       <!--
-        HOW TO ADD AN EVENT: copy one <article class="card event"> ... </article> block and edit it.
-        To move an event to "Past Events", cut the block and paste it in the section below,
+        HOW TO ADD AN EVENT: copy one <details class="card event"> ... </details> block and edit it.
+        - Everything inside <summary> is always visible (keep the teaser to one short sentence).
+        - Everything inside <div class="event-body"> only shows when someone clicks the card.
+        - Add the word "open" to <details class="card event" open> to make one start expanded.
+        To move an event to "Past Events", cut the block and paste it in a "Past Events" section,
         then change the tag to: <span class="tag tag--past">Past</span>
       -->
-      <div class="grid" style="margin-top:28px">
+      <div class="grid" style="margin-top:20px">
 
-        <article class="card event">
-          <div class="event-date"><div class="m">Month</div><div class="d">--</div><div class="y">2026</div></div>
-          <div>
-            <span class="tag">Competition</span>
-            <h3>Raffle</h3>
-            <div class="event-meta"><span>November 25</span><span>On Google Classroom</span><span>Open to WW-P students</span></div>
-            <p class="placeholder">If you joined the google classroom, you get one ticket. If you do the google form, you get two tickets. The raffle offers 3 prizes worth $10 each, which will be either candy or a gift card of your choice. Form is linked on google classroom or this website. Google classroom code: e44dyylo</p>
+        <details class="card event">
+          <summary class="event-summary">
+            <div class="event-date"><div class="m">Nov</div><div class="d">25</div><div class="y">2026</div></div>
+            <div>
+              <span class="tag">Giveaway</span>
+              <h3>Unspooled Raffle</h3>
+              <div class="event-meta"><span>Drawing: November 25</span><span>On Google Classroom</span><span>Open to WW-P students</span></div>
+              <p class="event-teaser">Three winners, $10 prizes each. Enter by joining our Google Classroom and taking our survey.</p>
+            </div>
+            <span class="event-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <div class="event-body">
+            <p>We're giving away <strong>three prizes worth $10 each</strong>. Each winner gets to choose between <strong>candy or a gift card</strong>. Entering only takes a couple of minutes, and it helps us reach more students across WW-P.</p>
+            <h4>How to earn tickets</h4>
+            <ul class="checklist">
+              <li><strong>Join our Google Classroom: 1 ticket.</strong> Use the button below, or enter class code <code>e44dyylo</code> in Google Classroom.</li>
+              <li><strong>Fill out our survey: 2 tickets.</strong> It's a quick multiple-choice form that takes about 1 to 2 minutes. The link is below and on our Google Classroom.</li>
+            </ul>
+            <h4>The drawing</h4>
+            <p>Winners will be drawn on <strong>November 25</strong> and announced on our Google Classroom, so make sure you've joined to find out if you won.</p>
+            <div class="btn-row">
+              <a class="btn" href="https://classroom.google.com/c/ODk4NjQ3NTUzNTg5?cjc=e44dyylo" target="_blank" rel="noopener">Join Google Classroom →</a>
+              <a class="btn btn--ghost" href="survey.html">Take the Survey</a>
+            </div>
           </div>
-        </article>
+        </details>
 
       </div>
     </div>
@@ -79,14 +100,31 @@
     <div class="container">
       <h2>Ongoing Events</h2>
       <div class="grid" style="margin-top:28px">
-        <article class="card event">
-          <div class="event-date"><div class="m">Nov</div><div class="d">--</div><div class="y">2026</div></div>
-          <div>
-            <span class="tag tag--past">Current</span>
-            <h3>WW-P Student Social Media Survey</h3>
-            <p>Help us gather data about our peers in the West-Windsor Plainsboro Regional School District regarding screen time and social media use. Its a quick multiple-choice form, only 1-2 minutes!</p>
+        <details class="card event">
+          <summary class="event-summary">
+            <div class="event-date event-date--live"><div class="m">Open</div><div class="d">Now</div><div class="y">2026</div></div>
+            <div>
+              <span class="tag">Ongoing</span>
+              <h3>WW-P Student Social Media Survey</h3>
+              <div class="event-meta"><span>1 to 2 minutes</span><span>Online (Google Forms)</span><span>Open to WW-P students</span></div>
+              <p class="event-teaser">A quick, anonymous survey about screen time and social media. It also earns you 2 raffle tickets.</p>
+            </div>
+            <span class="event-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+          </summary>
+          <div class="event-body">
+            <p>Help us gather data about our peers in the West Windsor-Plainsboro Regional School District about screen time and social media use. It's a quick multiple-choice form that only takes 1 to 2 minutes.</p>
+            <h4>Why it matters</h4>
+            <p>Everything Unspooled does starts with listening. Our first round of responses showed that <strong>83.5%</strong> of WW-P students use social media for more time than they want to. Every new response helps us understand <em>why</em> teens keep scrolling, and design workshops, challenges, and resources that actually help.</p>
+            <ul class="checklist">
+              <li>Anonymous: we don't collect your name</li>
+              <li>Responses are only used for the Unspooled project</li>
+              <li>Counts for <strong>2 tickets</strong> in our raffle (see above)</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn" href="survey.html">Take the Survey →</a>
+            </div>
           </div>
-        </article>
+        </details>
       </div>
     </div>
   </section>
@@ -124,6 +162,7 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="survey.html">Take the Survey</a></li>
+          <li><a href="https://classroom.google.com/c/ODk4NjQ3NTUzNTg5?cjc=e44dyylo" target="_blank" rel="noopener">Join our Google Classroom</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="mailto:teamunspooled@gmail.com">teamunspooled@gmail.com</a></li>
         </ul>
