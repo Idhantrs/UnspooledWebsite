@@ -1,6 +1,6 @@
 # Unspooled Website
 
-A static website (plain HTML/CSS/JS, no build step) for the Unspooled FPS Community Problem Solving team.
+A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led nonprofit.
 
 ## Files
 
