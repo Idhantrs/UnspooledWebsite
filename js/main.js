@@ -33,21 +33,16 @@ function runIntro() {
   intro.innerHTML = `
     <div class="intro__glow"></div>
     <div class="intro__inner">
-      <div class="intro__spool-wrap">
-        <span class="intro__string"></span>
-        <svg class="intro__spool" viewBox="0 0 40 40">
-          <rect x="8" y="5" width="20" height="4" rx="2" fill="#fbf8f3"/>
-          <rect x="8" y="31" width="20" height="4" rx="2" fill="#fbf8f3"/>
-          <rect x="11" y="9" width="14" height="22" fill="#e4572e"/>
-          <path d="M11 13.5h14M11 18h14M11 22.5h14M11 27h14" stroke="#c4421d" stroke-width="1.5"/>
-          <path class="intro__tail" pathLength="1" d="M25 27c7 0 11 3 9 9" stroke="#e4572e" fill="none" stroke-width="2.2" stroke-linecap="round"/>
-        </svg>
+      <div class="intro__logo-wrap">
+        <span class="intro__halo"></span>
+        <img class="intro__logo" src="images/logo-800.jpg" alt="" width="800" height="800">
       </div>
       <p class="intro__kicker">${INTRO_KICKER}</p>
       <div class="intro__title">${letters}</div>
       <svg class="intro__line" viewBox="0 0 340 40" fill="none">
-        <path pathLength="1" d="M4 24C70 24 110 10 150 18c28 6 32 18 16 18s-12-22 10-24c34-3 74 14 152 10" stroke="#e4572e" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="332" cy="28" r="4.5" fill="#f3a712"/>
+        <defs><linearGradient id="introThread" x1="0" x2="1"><stop offset="0" stop-color="#6a1ed6"/><stop offset="0.6" stop-color="#a855ff"/><stop offset="1" stop-color="#ead9ff"/></linearGradient></defs>
+        <path pathLength="1" d="M4 24C70 24 110 10 150 18c28 6 32 18 16 18s-12-22 10-24c34-3 74 14 152 10" stroke="url(#introThread)" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="332" cy="28" r="4.5" fill="#c9a2ff"/>
       </svg>
       <p class="intro__desc">${INTRO_DESC}</p>
     </div>

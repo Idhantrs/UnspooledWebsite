@@ -15,7 +15,23 @@ A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led
 | `contact.html` | Contact info + message form |
 | `css/style.css` | All styling (colors at the top) |
 | `js/main.js` | "Project Unspooled" intro, scroll animations, mobile menu, contact form |
-| `images/` | Put member photos here |
+| `images/` | Logo files + put member photos here |
+| `images/logo.png` | Full-size logo (master copy). `logo-800.jpg` / `logo-128.png` are web-sized copies used on the site |
+| `images/og-image.jpg` | 1200×630 share image (see "Link previews" below) |
+
+## Logo & colors
+
+The color palette at the top of `css/style.css` is pulled from the logo: neon violet
+(`--thread`), deep violet (`--thread-dark`), lavender (`--gold`), and near-black (`--ink`).
+If the logo changes, replace `images/logo.png`, re-export `logo-800.jpg` (800×800) and
+`logo-128.png` (128×128), plus `favicon-32.png` and `apple-touch-icon.png` (180×180).
+
+## Link previews
+
+Once the site has its final web address, add this line to the `<head>` of each page
+(link previews need a full URL, not a relative path):
+
+    <meta property="og:image" content="https://YOUR-SITE-ADDRESS/images/og-image.jpg">
 
 ## The intro screen
 
