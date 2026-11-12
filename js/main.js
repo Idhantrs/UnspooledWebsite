@@ -130,7 +130,7 @@ if (toggle && links) {
 // ---------------------------------------------------------------
 if (!reduceMotion && "IntersectionObserver" in window) {
   const targets = document.querySelectorAll(
-    "main .section h2, main .section .lead, main .section .eyebrow, .card, .cycle-step, .cycle-loop, .cta-band, main blockquote, .table-wrap, .story, .sources"
+    "main .section h2, main .section .lead, main .section .eyebrow, .card, .cycle-step, .cycle-loop, .cta-band, main blockquote, .quote-card, .table-wrap, .story, .sources"
   );
   const io = new IntersectionObserver(
     (entries) => {
@@ -153,9 +153,10 @@ if (!reduceMotion && "IntersectionObserver" in window) {
   );
   targets.forEach((el) => {
     if (el.closest(".hero, .page-hero, .intro")) return;
+    if (el.matches("blockquote") && el.closest(".quote-card")) return; // the card animates as one piece
     // Stagger siblings in a grid so cards cascade in
     const parent = el.parentElement;
-    if (parent && (parent.classList.contains("grid") || parent.classList.contains("cycle"))) {
+    if (parent && (parent.classList.contains("grid") || parent.classList.contains("cycle") || parent.classList.contains("quote-grid"))) {
       const index = [...parent.children].indexOf(el);
       el.style.transitionDelay = `${(index % 4) * 90}ms`;
     }
