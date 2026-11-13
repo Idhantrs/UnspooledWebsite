@@ -10,12 +10,14 @@ A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led
 | `problem.html` | Research, the Overstimulation Cycle, stakeholders, current solutions, sources |
 | `team.html` | About the team + **6 member cards to fill in** + timeline |
 | `events.html` | Upcoming / past events (copy a card to add one) |
+| `videos.html` | Team videos played on the site, with links to each on YouTube/TikTok/Instagram/Snapchat (instructions in a comment above the cards) |
 | `survey.html` | Links to the Google Form survey |
 | `get-involved.html` | How each stakeholder group can help + support resources |
 | `contact.html` | Contact info + message form |
 | `css/style.css` | All styling (colors at the top) |
 | `js/main.js` | "Project Unspooled" intro, scroll animations, mobile menu, contact form |
 | `images/` | Logo files + put member photos here |
+| `videos/` | Put video files (MP4, under 25 MB each) here |
 | `images/logo.png` | Full-size logo (master copy). `logo-800.jpg` / `logo-128.png` are web-sized copies used on the site |
 | `images/og-image.jpg` | 1200×630 share image (see "Link previews" below) |
 

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videos | Unspooled</title>
+  <meta name="description" content="Watch Unspooled videos about screen time, social media, and building healthier digital habits.">
+  <meta property="og:title" content="Videos | Unspooled">
+  <meta property="og:description" content="A student-led initiative helping WW-P teens fight back against social media addiction.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#0d0618">
+  <script>/* Intro plays once per visit. Runs early so the page never flashes underneath it; the timeout un-hides the page if js/main.js ever fails to load. */(function(d){d.classList.add("js");try{if(!sessionStorage.getItem("unspooled-intro-seen")){d.classList.add("intro-pending");setTimeout(function(){if(!window.unspooledIntro)d.classList.remove("intro-pending")},2500)}}catch(e){}})(document.documentElement);</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Unspooled home">
+      <img class="brand-logo" src="images/logo-128.png" alt="" width="40" height="40">
+      <span>Unspooled</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="problem.html">The Problem</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="videos.html" aria-current="page">Videos</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="btn" href="survey.html">Take the Survey</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Watch</span>
+      <h1>Videos</h1>
+      <p class="lead">Short videos from our team about screen time, social media, and taking back control of your scroll. Watch them right here, or find them on your favorite app.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Our Videos</h2>
+      <!--
+        HOW TO ADD A VIDEO: copy one <article class="card video-card"> ... </article> block and edit it.
+
+        1. Put the video file in the "videos" folder (MP4 works everywhere). Keep each file under
+           25 MB (Cloudflare Pages' limit). A still image to show before it plays is optional.
+        2. Replace the whole <div class="video-placeholder"> ... </div> with:
+
+             <video controls playsinline preload="metadata" poster="videos/my-video.jpg">
+               <source src="videos/my-video.mp4" type="video/mp4">
+             </video>
+
+           (Delete the poster="..." part if you don't have a still image.)
+           The frame is tall (9:16) for TikTok/Reels/Shorts-style videos. For a wide video,
+           change <div class="video-frame"> to <div class="video-frame video-frame--wide">.
+        3. Change the title and description.
+        4. Replace each href="#" with the link to that video on that app.
+           If the video isn't on one of the apps, delete that <a> line.
+      -->
+      <div class="grid grid-3 video-grid" style="margin-top:28px">
+
+        <article class="card video-card">
+          <div class="video-frame">
+            <div class="video-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <span>Video coming soon</span>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Video Title</h3>
+            <p>One or two sentences about what this video covers.</p>
+            <div class="video-links">
+              <span class="video-links-label">Watch on</span>
+              <a href="#" target="_blank" rel="noopener">YouTube</a>
+              <a href="#" target="_blank" rel="noopener">TikTok</a>
+              <a href="#" target="_blank" rel="noopener">Instagram</a>
+              <a href="#" target="_blank" rel="noopener">Snapchat</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card video-card">
+          <div class="video-frame">
+            <div class="video-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <span>Video coming soon</span>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Video Title</h3>
+            <p>One or two sentences about what this video covers.</p>
+            <div class="video-links">
+              <span class="video-links-label">Watch on</span>
+              <a href="#" target="_blank" rel="noopener">YouTube</a>
+              <a href="#" target="_blank" rel="noopener">TikTok</a>
+              <a href="#" target="_blank" rel="noopener">Instagram</a>
+              <a href="#" target="_blank" rel="noopener">Snapchat</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card video-card">
+          <div class="video-frame">
+            <div class="video-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <span>Video coming soon</span>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Video Title</h3>
+            <p>One or two sentences about what this video covers.</p>
+            <div class="video-links">
+              <span class="video-links-label">Watch on</span>
+              <a href="#" target="_blank" rel="noopener">YouTube</a>
+              <a href="#" target="_blank" rel="noopener">TikTok</a>
+              <a href="#" target="_blank" rel="noopener">Instagram</a>
+              <a href="#" target="_blank" rel="noopener">Snapchat</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container center">
+      <h2>Follow Unspooled</h2>
+      <p class="lead">New videos go up on all of our accounts. Follow along wherever you scroll (just not for too long).</p>
+      <!-- Replace each href="#" with the link to the team's profile on that app. -->
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Snapchat</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="images/logo-128.png" alt="" width="40" height="40">
+          <span>Unspooled</span>
+        </a>
+        <p>A student-led initiative from West Windsor-Plainsboro, New Jersey, helping teens take back control of their digital habits.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="survey.html">Take the Survey</a></li>
+          <li><a href="https://classroom.google.com/c/ODk4NjQ3NTUzNTg5?cjc=e44dyylo" target="_blank" rel="noopener">Join our Google Classroom</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:teamunspooled@gmail.com">teamunspooled@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Unspooled. All rights reserved.</span>
+      <span>Made by students, for our community.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

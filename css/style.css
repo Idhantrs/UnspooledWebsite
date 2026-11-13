@@ -101,7 +101,7 @@ p { margin: 0 0 1em; }
 }
 .nav-toggle svg { width: 28px; height: 28px; }
 
-@media (max-width: 880px) {
+@media (max-width: 1040px) {
   .nav-toggle { display: block; }
   .nav-links {
     position: absolute; top: 68px; left: 0; right: 0;
@@ -484,7 +484,7 @@ code { background: #efe5ff; color: var(--thread-dark); padding: 2px 7px; border-
 .nav-links a:not(.btn):hover { background: transparent; }
 .nav-links a:not(.btn):hover::after,
 .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
-@media (max-width: 880px) { .nav-links a:not(.btn)::after { right: auto; width: 40px; bottom: 6px; } }
+@media (max-width: 1040px) { .nav-links a:not(.btn)::after { right: auto; width: 40px; bottom: 6px; } }
 
 a.card { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease; }
 a.card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(13, 6, 24, 0.12); border-color: #d4b8fb; }
@@ -643,3 +643,40 @@ html.intro-reveal .site-header { animation: headerIn 0.9s 0.5s cubic-bezier(0.2,
   }
   .intro.is-leaving { transform: none !important; transition: opacity 0.6s ease !important; }
 }
+
+/* ---------- Videos page ---------- */
+.video-grid { align-items: start; }
+.video-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.video-frame {
+  position: relative; aspect-ratio: 9 / 16; background: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.video-frame--wide { aspect-ratio: 16 / 9; }
+.video-frame video, .video-frame iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border: 0; object-fit: contain; background: #000;
+}
+.video-placeholder {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 14px; color: #b3a8c9;
+  background:
+    radial-gradient(70% 50% at 50% 40%, rgba(139, 44, 245, 0.28), transparent 70%),
+    var(--ink);
+  font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+}
+.video-placeholder svg {
+  width: 64px; height: 64px; padding: 18px 16px 18px 20px; border-radius: 50%;
+  color: #fff; background: rgba(139, 44, 245, 0.55);
+  box-shadow: 0 0 40px -6px rgba(139, 44, 245, 0.8);
+}
+.video-info { padding: 22px 24px 24px; }
+.video-info p { font-size: 0.95rem; }
+.video-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.video-links-label { font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-right: 2px; }
+.video-links a {
+  font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  padding: 5px 12px; border-radius: 999px;
+  background: #efe5ff; color: var(--thread-dark);
+  transition: background 0.15s, color 0.15s;
+}
+.video-links a:hover { background: var(--thread); color: #fff; }
