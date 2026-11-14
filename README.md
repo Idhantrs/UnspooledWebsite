@@ -54,7 +54,6 @@ Visitors can click, tap, scroll, or press any key to skip it, and people who hav
 2. **Events.** Open `events.html`. Each event is a click-to-expand card: the `<summary>` part
    is always visible (keep it short), and the `<div class="event-body">` part only shows when
    someone clicks. Instructions are in a comment above the cards.
-3. **Social handle** (optional) in `contact.html`.
 
 The team email (`team@unspooled.org`) is already filled in everywhere. To change it,
 find and replace it across all `.html` files (in VS Code: Ctrl+Shift+H).
