@@ -220,7 +220,7 @@ document.querySelectorAll("[data-year]").forEach((el) => {
 });
 
 // ---------------------------------------------------------------
-// Contact form: opens the visitor's email app with the message pre-filled.
+// Contact form: opens the visitor's email app (in a new tab) with the message pre-filled.
 // (No server needed. To change the destination, edit data-to on the <form>.)
 // ---------------------------------------------------------------
 const form = document.querySelector("#contact-form");
@@ -235,7 +235,10 @@ if (form) {
       `Email: ${data.get("email")}\n` +
       `Organization: ${data.get("org") || "N/A"}\n\n` +
       `${data.get("message")}`;
-    window.location.href =
+    const url =
       `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const win = window.open(url, "_blank");
+    if (win) win.opener = null;
+    else window.location.href = url; // pop-up blocked: fall back to this tab
   });
 }

@@ -56,7 +56,7 @@ Visitors can click, tap, scroll, or press any key to skip it, and people who hav
    someone clicks. Instructions are in a comment above the cards.
 3. **Social handle** (optional) in `contact.html`.
 
-The team email (`teamunspooled@gmail.com`) is already filled in everywhere. To change it,
+The team email (`team@unspooled.org`) is already filled in everywhere. To change it,
 find and replace it across all `.html` files (in VS Code: Ctrl+Shift+H).
 
 To preview, double-click `index.html` to open it in your browser.
@@ -86,4 +86,4 @@ A custom domain looks more professional when you email companies. It costs about
 
 ### Optional: a custom-domain email
 If you buy a domain, **Cloudflare Email Routing** (free) can forward
-`hello@yourdomain.org` to `teamunspooled@gmail.com`.
+`team@unspooled.org` (the address used on the site) to the team Gmail inbox.
