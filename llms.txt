@@ -1,0 +1,22 @@
+# Unspooled
+
+> Unspooled is a student-led initiative from West Windsor-Plainsboro, New Jersey, helping teenagers break the cycle of compulsive social media use (the "Overstimulation Cycle").
+
+Contact: team@unspooled.org
+
+## Pages
+
+- [Home](https://unspooled.org/): Overview, key survey statistics, and the Overstimulation Cycle
+- [The Problem](https://unspooled.org/problem): Research, local WW-P survey results, stakeholders, current solutions, and sources
+- [Our Team](https://unspooled.org/team): The six students behind Unspooled and the project timeline
+- [Events](https://unspooled.org/events): Upcoming and ongoing workshops, challenges, and giveaways
+- [Videos](https://unspooled.org/videos): Team videos about screen time and healthier digital habits
+- [Get Involved](https://unspooled.org/get-involved): How teens, parents, educators, and organizations can help
+- [Take the Survey](https://unspooled.org/survey): Anonymous survey on teen social media habits in WW-P
+- [Contact](https://unspooled.org/contact): Partnerships, events, and social media handles
+
+## Machine-readable
+
+- [Sitemap](https://unspooled.org/sitemap.xml)
+- [API catalog](https://unspooled.org/.well-known/api-catalog)
+- [OpenAPI description](https://unspooled.org/.well-known/openapi.json)

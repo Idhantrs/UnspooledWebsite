@@ -21,6 +21,16 @@ A static website (plain HTML/CSS/JS, no build step) for Unspooled, a student-led
 | `images/logo.png` | Full-size logo (master copy). `logo-800.jpg` / `logo-128.png` are web-sized copies used on the site |
 | `images/og-image.jpg` | 1200×630 share image (see "Link previews" below) |
 
+## Files for search engines and AI agents
+
+| File | What it is |
+|---|---|
+| `robots.txt` | Crawler rules, AI-bot rules, and Content Signals (`ai-train`, `search`, `ai-input`) |
+| `sitemap.xml` | List of every public page. **When you add or remove a page, add/remove its `<url>` here** (and in `llms.txt`), and bump `<lastmod>` when a page changes |
+| `llms.txt` | Plain-text guide to the site for AI tools |
+| `.well-known/api-catalog`, `.well-known/openapi.json` | Machine-readable description of how to fetch pages (RFC 9727) |
+| `.nojekyll` | Tells GitHub Pages to publish files as-is. **Don't delete it**, or `.well-known/` stops being published |
+
 ## Logo & colors
 
 The color palette at the top of `css/style.css` is pulled from the logo: neon violet
@@ -60,29 +70,15 @@ find and replace it across all `.html` files (in VS Code: Ctrl+Shift+H).
 
 To preview, double-click `index.html` to open it in your browser.
 
-## Deploying to Cloudflare Pages (free)
+## Deploying (GitHub Pages)
 
-### Option A: Drag and drop (easiest, no Git)
-1. Create a free account at https://dash.cloudflare.com/sign-up
-2. In the dashboard, go to **Workers & Pages** → **Create** → **Pages** tab → **Upload assets**
-   (it may say "Use direct upload" / "Drag and drop your files").
-3. Name the project `unspooled` (this becomes `unspooled.pages.dev`; if it's taken, try `unspooled-wwp` or similar).
-4. Drag in the **whole `UnspooledWebsite` folder** (or a zip of it) and click **Deploy site**.
-5. To update later: open the project → **Create new deployment** → upload the folder again.
+The site is hosted free on **GitHub Pages** from this repo's `main` branch. Every push to `main`
+goes live within a minute or two. To check or change the settings: the repo on GitHub →
+**Settings** → **Pages** (source: `main`, folder: `/ (root)`, custom domain: `unspooled.org`).
+Add teammates as collaborators on the repo so they can edit too.
 
-### Option B: GitHub (auto-updates every time you push)
-1. Create a GitHub repo and upload these files (GitHub Desktop is easiest).
-2. In Cloudflare: **Workers & Pages** → **Create** → **Pages** → **Connect to Git** → pick the repo.
-3. Build settings: Framework preset **None**, build command **(leave empty)**, output directory **`/`**.
-4. Click **Save and Deploy**. Every push to `main` will redeploy automatically, and all
-   6 teammates can edit if you add them as collaborators on the repo.
+The `unspooled.org` domain is registered with Cloudflare, and its DNS records there point to GitHub Pages.
 
-### Optional: a custom domain (e.g., `unspooled.org`)
-A custom domain looks more professional when you email companies. It costs about $10–15 a year.
-1. In Cloudflare, go to **Domain Registration** → **Register Domains** and buy the domain
-   (Cloudflare sells at cost; you'll need a parent's card).
-2. Open your Pages project → **Custom domains** → **Set up a custom domain** → enter it. Cloudflare sets up DNS and HTTPS for you.
-
-### Optional: a custom-domain email
-If you buy a domain, **Cloudflare Email Routing** (free) can forward
-`team@unspooled.org` (the address used on the site) to the team Gmail inbox.
+### Custom-domain email
+**Cloudflare Email Routing** (free) can forward `team@unspooled.org` (the address used on the site)
+to the team Gmail inbox. Set it up in the Cloudflare dashboard under the domain → **Email**.

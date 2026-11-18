@@ -1,0 +1,34 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Unspooled site content",
+    "version": "1.0.0",
+    "description": "Read-only access to the public pages of unspooled.org. Every page is served as HTML. No authentication."
+  },
+  "servers": [{ "url": "https://unspooled.org" }],
+  "paths": {
+    "/{page}": {
+      "get": {
+        "summary": "Get a page",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "required": true,
+            "description": "Page slug. Use an empty value for the home page.",
+            "schema": { "type": "string", "enum": ["", "problem", "team", "events", "videos", "get-involved", "survey", "contact"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The page.",
+            "content": {
+              "text/html": { "schema": { "type": "string" } }
+            }
+          },
+          "404": { "description": "No such page." }
+        }
+      }
+    }
+  }
+}

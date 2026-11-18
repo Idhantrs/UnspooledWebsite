@@ -1,0 +1,39 @@
+# robots.txt for https://unspooled.org (RFC 9309)
+#
+# Unspooled is a public awareness project. We want people and AI tools to find
+# and share what we publish, so everyone may read the whole site.
+#
+# Content Signals (https://contentsignals.org/) state how our content may be used
+# after it is accessed:
+#   search=yes    - show it in search results with links back to us
+#   ai-input=yes  - use it to answer questions in AI tools (RAG, grounding, agents)
+#   ai-train=yes  - use it to train AI models
+# To opt out of AI training, change ai-train=yes to ai-train=no in each group below.
+
+# --- AI crawlers: explicit rules ---
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+User-agent: Amazonbot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+Disallow: /cdn-cgi/
+
+# --- Everyone else ---
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+Disallow: /cdn-cgi/
+
+Sitemap: https://unspooled.org/sitemap.xml

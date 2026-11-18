@@ -1,0 +1,16 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://unspooled.org/",
+      "service-desc": [
+        { "href": "https://unspooled.org/.well-known/openapi.json", "type": "application/vnd.oai.openapi+json" }
+      ],
+      "service-doc": [
+        { "href": "https://unspooled.org/llms.txt", "type": "text/plain" }
+      ],
+      "describedby": [
+        { "href": "https://unspooled.org/sitemap.xml", "type": "application/xml" }
+      ]
+    }
+  ]
+}
